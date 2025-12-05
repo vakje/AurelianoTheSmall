@@ -1,9 +1,9 @@
--- Audio utility for simplified sound management
+
 local Audio = {}
 local sounds = {}
 
--- Requires simple WAV files in the assets folder:
--- assets/coin.wav, assets/hit.wav, assets/start.wav
+
+-- assets/coin.mp3, assets/hit.mp3, assets/start.mp3
 function Audio.load(files)
     for name, path in pairs(files) do
         local source = love.audio.newSource(path, "static")
@@ -16,7 +16,7 @@ function Audio.play(name)
     if source then
         source:play()
     else
-        -- print("Warning: Sound " .. name .. " not found.")
+        
     end
 end
 
